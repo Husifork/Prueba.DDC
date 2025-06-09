@@ -1,0 +1,18 @@
+{
+  "resourceGroups": {
+    "value": [
+      {
+        "name": "RSGR-QA-ADMIN-001",
+        "location": "eastus2"
+      },
+      {
+        "name": "RSGR-PR-ADMIN-001",
+        "location": "eastus2"
+      },
+      {
+        "name": "RSGR-PR-PORTALPRODUCCION-001",
+        "location": "eastus2"
+      }
+    ]
+  }
+}
