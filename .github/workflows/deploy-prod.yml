@@ -3,12 +3,12 @@ name: Deploy to QA
 on:
   push:
     branches:
-      - qa
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: qa
+    environment: prod
     steps:
     - name: Checkout código
       uses: actions/checkout@v3
