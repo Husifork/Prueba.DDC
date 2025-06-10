@@ -1,14 +1,14 @@
-name: Deploy to QA
+name: Deploy to Prod
 
 on:
   push:
     branches:
-      - qa
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: qa
+    environment: prod
     steps:
     - name: Checkout código
       uses: actions/checkout@v3
@@ -34,5 +34,5 @@ jobs:
         inlineScript: |
           az deployment sub create \
             --location eastus2 \
-            --template-file infra/subscription-QA.bicep \
-            --parameters infra/parameters/dev.resources.parameters.json
+            --template-file infra/subscription-PR.bicep \
+            --parameters infra/parameters/pr.resources.parameters.json
