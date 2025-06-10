@@ -1,5 +1,6 @@
 targetScope = 'subscription'
 
+param environment string 
 param appServicePlanNameAdministracion string
 param appServiceAdministracion1 string
 
@@ -11,7 +12,6 @@ module qa 'main-rsgr-qa-admin-001.bicep' = {
     location: 'eastus2'
         appServicePlanNameAdministracion: appServicePlanNameAdministracion
         appServiceAdministracion1: appServiceAdministracion1
-    // ...otros params
   }
 }
 
@@ -21,6 +21,5 @@ module qa 'main-rsgr-qa-admin-001.bicep' = {
   scope: resourceGroup('RSGR-PR-ADMIN-001')
   params: {
     location: 'eastus2'
-    // ...otros params
   }
 }*/
