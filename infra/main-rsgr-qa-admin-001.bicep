@@ -1,13 +1,13 @@
 targetScope = 'resourceGroup'
 
 param location string = resourceGroup().location
-param environment string //necesario aunque no se use directamente acá, se usa en el parameters.json
+//param environment string //necesario aunque no se use directamente acá, se usa en el parameters.json
 //param storageAccountName1 string
 //param storageAccountName2 string
 //param storageAccountName3 string
 param appServicePlanNameAdministracion string
 param appServiceAdministracion1 string
-param appService2Config string
+//param appService2Config string
 //param appServiceAdministracion2 string
 
 
