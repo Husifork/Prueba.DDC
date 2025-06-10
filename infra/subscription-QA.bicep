@@ -1,6 +1,6 @@
 targetScope = 'subscription'
 
-param environment string 
+//param environment string 
 param appServicePlanNameAdministracion string
 param appServiceAdministracion1 string
 
