@@ -6,6 +6,5 @@
     "location": { "value": "eastus2" },
     "appServicePlanNameAdministracion": { "value": "ASPL-PR-ADMINISTRACION-001" },
     "appServiceAdministracion1": { "value": "APSV-QA-ADMINISTRACION-001" }
-      }
-    }
-    
+  }
+}
