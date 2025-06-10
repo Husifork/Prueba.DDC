@@ -34,5 +34,5 @@ jobs:
         inlineScript: |
           az deployment sub create \
             --location eastus2 \
-            --template-file DDC-Administracion/main.bicep \
-            --parameters @DDC-Administracion/parameters/dev.resources.parameters.json
+            --template-file infra/subscriptionQA.bicep \
+            --parameters infra/parameters/dev.resources.parameters.json
