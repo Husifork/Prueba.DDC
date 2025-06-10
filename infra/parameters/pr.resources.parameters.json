@@ -3,10 +3,11 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "location": { "value": "eastus2" },
+    "appServicePlanResourceGroup": { "value": "RSGR-QA-ADMIN-001" },
     "appServicePlanNameAdministracion": { "value": "ASPL-PR-ADMINISTRACION-001" },
     "appServiceAdministracion1": { "value": "APSV-QA-ADMINISTRACION-001" },
     "storageAccountName1": { "value": "stacprcredenciales001" },
-    "storageAccountName2": { "value": "stacprportalproductores001" },
-    "storageAccountName3": { "value": "stacprportalproductores002" }
+    "storageAccountName2": { "value": "stacprptlproductores001" },
+    "storageAccountName3": { "value": "stacprptlproductores002" }
     }
 }
