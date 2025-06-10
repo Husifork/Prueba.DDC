@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "location": { "value": "eastus2" },
-    "appServicePlanNameAdministracion": { "value": "ASPL-PR-ADMINISTRACION-001" },
+    "appServicePlanNameAdministracion": { "value": "ASPL-QA-ADMINISTRACION-001" },
     "appServiceAdministracion1": { "value": "APSV-QA-ADMINISTRACION-001" }
   }
 }

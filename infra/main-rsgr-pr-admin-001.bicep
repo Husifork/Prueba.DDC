@@ -6,7 +6,6 @@ param storageAccountName2 string
 param storageAccountName3 string
 param appServicePlanNameAdministracion string
 param appServiceAdministracion1 string
-param appServicePlanResourceGroup string
 
 
 module storagePortal1 'modules/storageAccount/storageAccount.bicep' = {
@@ -33,13 +32,23 @@ module storagePortal3 'modules/storageAccount/storageAccount.bicep' = {
   }
 }
 
-module appService1 'modules/appService/appServicePR.bicep' = {
+module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep' = {
+  name: 'deployAppServicePlan'
+  params: {
+    location: location
+    appServicePlanName: appServicePlanNameAdministracion
+  }
+}
+
+module appService1 'modules/appService/appService.bicep' = {
   name: 'deployAppService1'
   params: {
     location: location
-    appServicePlanResourceGroup: appServicePlanResourceGroup
     appServiceName: appServiceAdministracion1
     appServicePlanName: appServicePlanNameAdministracion
     
    }
+     dependsOn: [
+    appServicePlan
+  ]
 }
