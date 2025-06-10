@@ -1,7 +1,6 @@
 targetScope = 'subscription'
 
 //param environment string 
-param appServicePlanResourceGroup string
 param appServicePlanNameAdministracion string
 param appServiceAdministracion1 string
 param location string
@@ -14,7 +13,6 @@ module pr 'main-rsgr-pr-admin-001.bicep' = {
   scope: resourceGroup('RSGR-PR-ADMIN-001')
   params: {
         location: location
-        appServicePlanResourceGroup: appServicePlanResourceGroup
         appServicePlanNameAdministracion: appServicePlanNameAdministracion
         appServiceAdministracion1: appServiceAdministracion1
         storageAccountName1: storageAccountName1
