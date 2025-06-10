@@ -4,20 +4,9 @@
   "parameters": {
     "location": { "value": "eastus2" },
     "appServicePlanNameAdministracion": { "value": "ASPL-PR-ADMINISTRACION-001" },
-    "appServiceAdministracion1": { "value": "my-appservice-qa" },
-    "appServiceAdministracion2": { "value": "my-appservice-qa" },
-    "appService2Name": { "value": "my-appservice-pr" },
-    "appService2Config": {
-      "value": {
-        "siteConfig": {
-          "alwaysOn": true,
-          "numberOfWorkers": 2,
-          "netFrameworkVersion": "v8.0"
-        }
-      }
-    },
-    "storageAccountName1": { "value": "staccustom001" },
-    "storageAccountName2": { "value": "staccustom001" },
-    "storageAccountName3": { "value": "staccustom001" }
-  }
+    "appServiceAdministracion1": { "value": "APSV-QA-ADMINISTRACION-001" },
+    "storageAccountName1": { "value": "stacprcredenciales001" },
+    "storageAccountName2": { "value": "stacprportalproductores001" },
+    "storageAccountName3": { "value": "stacprportalproductores002" }
+    }
 }
