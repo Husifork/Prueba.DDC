@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "location": { "value": "eastus2" },
-    "appServicePlanNameAdministracion": { "value": "ASPL-PR-ADMINISTRACION-002" },
+    "appServicePlanNameAdministracion": { "value": "ASPL-PR-ADMINISTRACION-001" },
     "appServiceAdministracion1": { "value": "APSV-PR-ADMINISTRACION-001" },
     "storageAccountName1": { "value": "stacprcredenciales001" },
     "storageAccountName2": { "value": "stacprptlproductores001" },
