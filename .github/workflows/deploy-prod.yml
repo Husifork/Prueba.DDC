@@ -3,12 +3,12 @@ name: Deploy to QA
 on:
   push:
     branches:
-      - main
+      - qa
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: prod
+    environment: qa
     steps:
     - name: Checkout código
       uses: actions/checkout@v3
@@ -25,8 +25,8 @@ jobs:
         inlineScript: |
           az deployment sub create \
             --location eastus2 \
-            --template-file DDC-Administracion/rg.bicep \
-            --parameters @DDC-Administracion/parameters/dev.rg.parameters.json
+            --template-file infra/rg.bicep \
+            --parameters infra/parameters/dev.rg.parameters.json
 
     - name: Desplegar recursos a los RG
       uses: azure/cli@v1
@@ -34,5 +34,5 @@ jobs:
         inlineScript: |
           az deployment sub create \
             --location eastus2 \
-            --template-file DDC-Administracion/main.bicep \
-            --parameters @DDC-Administracion/parameters/dev.resources.parameters.json
+            --template-file infra/subscription-PR.bicep \
+            --parameters infra/parameters/pr.resources.parameters.json
