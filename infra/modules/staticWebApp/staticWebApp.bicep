@@ -29,6 +29,7 @@ resource staticWebApp 'Microsoft.Web/staticSites@2024-04-01' = {
     Ambiente: tagambiente
   }
   sku: {
+    name: skuName
     tier: skuName
   }
   properties: {
