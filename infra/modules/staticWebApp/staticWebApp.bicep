@@ -43,7 +43,6 @@ resource staticWebApp 'Microsoft.Web/staticSites@2024-04-01' = {
 resource staticWebAppBasicAuth 'Microsoft.Web/staticSites/basicAuth@2024-04-01' = {
   parent: staticWebApp
   name: 'default'
-  location: location
   properties: {
     applicableEnvironmentsMode: 'SpecifiedEnvironments'
   }
