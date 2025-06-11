@@ -1,4 +1,4 @@
-name: Deploy to Prod
+name: Deploy Gestor de Carga - Prod
 
 on:
   push:
