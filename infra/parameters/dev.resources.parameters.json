@@ -4,7 +4,19 @@
   "parameters": {
     "location":                         { "value": "eastus2" },
     "appServicePlanNameAdministracion": { "value": "ASPL-QA-ADMINISTRACION-001" },
+    "appServicePlanAdministraciontag":  {
+                                          "value": {
+                                            "Ambiente": "PR, QA",
+                                            "Proyecto": "Administracion"
+                                          }
+                                        },
     "appServiceAdministracion1":        { "value": "APSV-QA-ADMINISTRACION-001" },
+    "appServiceAdministracion1tag":  {
+                                          "value": {
+                                            "Ambiente": "PR, QA",
+                                            "Proyecto": "Administracion"
+                                          }
+                                        },
     "staticwebAppQAName":               { "value": "administrador-qa-bicep" },
     "staticwebAppQAsku":                { "value": "Free" },
     "staticwebAppQAtag":                { "value": "administrador-front-qa" },

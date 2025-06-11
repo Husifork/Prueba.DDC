@@ -1,15 +1,18 @@
 targetScope = 'subscription'
 
 //param environment string 
-param appServicePlanNameAdministracion string
-param appServiceAdministracion1 string
 param location string
+param appServicePlanNameAdministracion string
+param appServicePlanAdministraciontag object
+param appServiceAdministracion1 string
+param appServiceAdministracion1tag object
 param staticwebAppQAName string
 param staticwebAppQAsku string
 param staticwebAppQAtag string
 param staticwebAppQArepo string
 param staticwebAppQAbranch string
 param staticwebAppQAprovider string
+
 
 // RG 1: Para el primer RG donde se desplieguen App Services, Storages
 module qa 'main-rsgr-qa-admin-001.bicep' = {
@@ -18,7 +21,9 @@ module qa 'main-rsgr-qa-admin-001.bicep' = {
   params: {
         location: location
         appServicePlanNameAdministracion: appServicePlanNameAdministracion
+        appServicePlanAdministraciontag : appServicePlanAdministraciontag 
         appServiceAdministracion1: appServiceAdministracion1
+        appServiceAdministracion1tag : appServiceAdministracion1tag
         staticwebAppQAName : staticwebAppQAName
         staticwebAppQAsku : staticwebAppQAsku
         staticwebAppQAtag : staticwebAppQAtag

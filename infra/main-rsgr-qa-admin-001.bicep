@@ -2,7 +2,9 @@ targetScope = 'resourceGroup'
 
 param location string = resourceGroup().location
 param appServicePlanNameAdministracion string
+param appServicePlanAdministraciontag object
 param appServiceAdministracion1 string
+param appServiceAdministracion1tag object
 param staticwebAppQAName string
 param staticwebAppQAsku string
 param staticwebAppQAtag string
@@ -15,6 +17,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
   params: {
     location: location
     appServicePlanName: appServicePlanNameAdministracion
+    tags: appServicePlanAdministraciontag 
   }
 }
 
@@ -24,6 +27,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     location: location
     appServiceName: appServiceAdministracion1
     appServicePlanName: appServicePlanNameAdministracion
+    tags:appServiceAdministracion1tag
 
       }
   dependsOn: [

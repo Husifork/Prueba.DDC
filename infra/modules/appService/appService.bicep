@@ -2,8 +2,7 @@ param location string
 param appServiceName string
 param appServicePlanName string
 
-@description('Diccionario de tags, puede incluir AppInsights info')
-param tags object = {}
+param tags object
 
 resource appService 'Microsoft.Web/sites@2024-04-01' = {
   name: appServiceName
