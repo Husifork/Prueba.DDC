@@ -5,7 +5,7 @@
     "location":                         { "value": "eastus2" },
     "appServicePlanNameAdministracion": { "value": "ASPL-QA-ADMINISTRACION-001" },
     "appServiceAdministracion1":        { "value": "APSV-QA-ADMINISTRACION-001" },
-    "staticWebAppName":                 { "value": "administrador-qa-bicep" },
+    "staticwebAppQAName":               { "value": "administrador-qa-bicep" },
     "staticwebAppQAsku":                { "value": "Free" },
     "staticwebAppQAtag":                { "value": "administrador-front-qa" },
     "staticwebAppQArepo":               { "value": "https://github.com/LisitSPA/DDC.Admin.Front" },
