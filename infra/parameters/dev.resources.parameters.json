@@ -3,23 +3,12 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "location":                         { "value": "eastus2" },
+    "tagproyecto":                      { "value": "AdministracionQA" },
+    "tagambiente":                      { "value": "QA" },
     "appServicePlanNameAdministracion": { "value": "ASPL-QA-ADMINISTRACION-001" },
-    "appServicePlanAdministraciontag":  {
-                                          "value": {
-                                            "Ambiente": "PR, QA",
-                                            "Proyecto": "Administracion"
-                                          }
-                                        },
     "appServiceAdministracion1":        { "value": "APSV-QA-ADMINISTRACION-001" },
-    "appServiceAdministracion1tag":  {
-                                          "value": {
-                                            "Ambiente": "PR, QA",
-                                            "Proyecto": "Administracion"
-                                          }
-                                        },
     "staticwebAppQAName":               { "value": "administrador-qa-bicep" },
     "staticwebAppQAsku":                { "value": "Free" },
-    "staticwebAppQAtag":                { "value": "administrador-front-qa" },
     "staticwebAppQArepo":               { "value": "https://github.com/LisitSPA/DDC.Admin.Front" },
     "staticwebAppQAbranch":             { "value": "QA" },
     "staticwebAppQAprovider":           { "value": "GitHub" }

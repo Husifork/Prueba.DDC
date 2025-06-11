@@ -3,6 +3,8 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "location": { "value": "eastus2" },
+    "tagproyecto":                        { "value": "PR" },
+    "tagambiente":                        { "value": "PR" },
     "appServicePlanNameAdministracion":   { "value": "ASPL-PR-ADMINISTRACION-001" },
     "appServiceAdministracion1":          { "value": "APSV-PR-ADMINISTRACION-002" },
     "storageAccountName1":                { "value": "stacprcredenciales001" },
@@ -10,7 +12,6 @@
     "storageAccountName3":                { "value": "stacprptlproductores002" },
     "staticwebAppPRName":                 { "value": "administrador-prod-bicep" },
     "staticwebAppPRsku":                  { "value": "Free" },
-    "staticwebAppPRtag":                  { "value": "administrador-front-pr" },
     "staticwebAppPRrepo":                 { "value": "https://github.com/LisitSPA/DDC.Admin.Front" },
     "staticwebAppPRbranch":               { "value": "main" },
     "staticwebAppPRprovider":             { "value": "GitHub" }

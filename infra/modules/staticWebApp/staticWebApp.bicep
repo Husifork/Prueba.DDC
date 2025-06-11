@@ -8,7 +8,8 @@ param location string
 ])
 param skuName string
 @description('Etiqueta personalizada, ejemplo: administrador-front-qa')
-param tag string
+param tagproyecto string
+param tagambiente string
 param repositoryUrl string
 param branch string
 @allowed([
@@ -24,10 +25,10 @@ resource staticWebApp 'Microsoft.Web/staticSites@2024-04-01' = {
   name: staticWebAppName
   location: location
   tags: {
-    ddc: tag
+    Proyecto: tagproyecto
+    Ambiente: tagambiente
   }
   sku: {
-    name: skuName
     tier: skuName
   }
   properties: {

@@ -1,13 +1,12 @@
 targetScope = 'resourceGroup'
 
 param location string = resourceGroup().location
+param tagproyecto string
+param tagambiente string
 param appServicePlanNameAdministracion string
-param appServicePlanAdministraciontag object
 param appServiceAdministracion1 string
-param appServiceAdministracion1tag object
 param staticwebAppQAName string
 param staticwebAppQAsku string
-param staticwebAppQAtag string
 param staticwebAppQArepo string
 param staticwebAppQAbranch string
 param staticwebAppQAprovider string
@@ -17,7 +16,8 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
   params: {
     location: location
     appServicePlanName: appServicePlanNameAdministracion
-    tags: appServicePlanAdministraciontag 
+    tagproyecto: tagproyecto
+    tagambiente: tagambiente
   }
 }
 
@@ -27,7 +27,8 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     location: location
     appServiceName: appServiceAdministracion1
     appServicePlanName: appServicePlanNameAdministracion
-    tags:appServiceAdministracion1tag
+    tagproyecto: tagproyecto
+    tagambiente: tagambiente
 
       }
   dependsOn: [
@@ -42,7 +43,8 @@ module staticWebAppQA 'modules/staticWebApp/staticWebApp.bicep' = {
     staticWebAppName: staticwebAppQAName
     location: location
     skuName: staticwebAppQAsku
-    tag: staticwebAppQAtag
+    tagproyecto: tagproyecto
+    tagambiente: tagambiente
     repositoryUrl: staticwebAppQArepo
     branch: staticwebAppQAbranch
     provider: staticwebAppQAprovider

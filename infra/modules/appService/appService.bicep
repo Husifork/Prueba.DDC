@@ -1,13 +1,16 @@
 param location string
 param appServiceName string
 param appServicePlanName string
-
-param tags object
+param tagproyecto string
+param tagambiente string
 
 resource appService 'Microsoft.Web/sites@2024-04-01' = {
   name: appServiceName
   location: location
-  tags: tags
+  tags: {
+    Proyecto: tagproyecto
+    Ambiente: tagambiente
+  }
   kind: 'app'
   properties: {
     enabled: true

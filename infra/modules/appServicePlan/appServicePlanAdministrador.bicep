@@ -1,11 +1,15 @@
 param location string
 param appServicePlanName string
-param tags object
+param tagproyecto string
+param tagambiente string
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2024-04-01' = {
   name: appServicePlanName
   location: location
-  tags: tags 
+  tags: {
+    Proyecto: tagproyecto
+    Ambiente: tagambiente
+  }
   sku: {
     name: 'F1'
     tier: 'Free'

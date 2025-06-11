@@ -4,12 +4,13 @@ targetScope = 'subscription'
 param appServicePlanNameAdministracion string
 param appServiceAdministracion1 string
 param location string
+param tagproyecto string
+param tagambiente string
 param storageAccountName1 string
 param storageAccountName2 string
 param storageAccountName3 string
 param staticwebAppPRName string
 param staticwebAppPRsku string
-param staticwebAppPRtag string
 param staticwebAppPRrepo string
 param staticwebAppPRbranch string
 param staticwebAppPRprovider string
@@ -20,6 +21,8 @@ module pr 'main-rsgr-pr-admin-001.bicep' = {
   scope: resourceGroup('RSGR-PR-ADMIN-001')
   params: {
         location: location
+        tagproyecto: tagproyecto
+        tagambiente: tagambiente
         appServicePlanNameAdministracion: appServicePlanNameAdministracion
         appServiceAdministracion1: appServiceAdministracion1
         storageAccountName1: storageAccountName1
@@ -27,7 +30,6 @@ module pr 'main-rsgr-pr-admin-001.bicep' = {
         storageAccountName3: storageAccountName3
         staticwebAppPRName : staticwebAppPRName
         staticwebAppPRsku : staticwebAppPRsku
-        staticwebAppPRtag : staticwebAppPRtag
         staticwebAppPRrepo : staticwebAppPRrepo
         staticwebAppPRbranch  : staticwebAppPRbranch
         staticwebAppPRprovider : staticwebAppPRprovider
