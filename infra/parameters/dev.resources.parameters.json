@@ -2,15 +2,15 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "location":                         { "value": "eastus2" },
-    "tagproyecto":                      { "value": "AdministracionQA" },
-    "tagambiente":                      { "value": "QA" },
-    "appServicePlanNameAdministracion": { "value": "ASPL-QA-ADMINISTRACION-001" },
-    "appServiceAdministracion1":        { "value": "APSV-QA-ADMINISTRACION-001" },
-    "staticwebAppQAName":               { "value": "administrador-qa-bicep" },
-    "staticwebAppQAsku":                { "value": "Free" },
-    "staticwebAppQArepo":               { "value": "https://github.com/LisitSPA/DDC.Admin.Front" },
-    "staticwebAppQAbranch":             { "value": "QA" },
-    "staticwebAppQAprovider":           { "value": "GitHub" }
+    "location":                           { "value": "eastus2" },
+    "tagproyecto":                        { "value": "Gestor de Carga QA" },
+    "tagambiente":                        { "value": "QA" },
+    "appServicePlanNameAdministracion":   { "value": "ASPL-QA-GESTORCARGA-001" },
+    "appServiceAdministracion1":          { "value": "APSV-PR-GESTORCARGA-001" },
+    "staticwebAppQAName":                 { "value": "gestor-documental-qa-bicep" },
+    "staticwebAppQAsku":                  { "value": "Free" },
+    "staticwebAppQArepo":                 { "value": "https://github.com/LisitSPA/GestorDocumental.Front" },
+    "staticwebAppQAbranch":               { "value": "QA" },
+    "staticwebAppQAprovider":             { "value": "GitHub" }
   }
 }
