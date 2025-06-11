@@ -8,7 +8,7 @@
     "storageAccountName1":                { "value": "stacprcredenciales001" },
     "storageAccountName2":                { "value": "stacprptlproductores001" },
     "storageAccountName3":                { "value": "stacprptlproductores002" },
-    "staticWebAppName":                   { "value": "administrador-prod-bicep" },
+    "staticwebAppPRName":                 { "value": "administrador-prod-bicep" },
     "staticwebAppPRsku":                  { "value": "Free" },
     "staticwebAppPRtag":                  { "value": "administrador-front-pr" },
     "staticwebAppPRrepo":                 { "value": "https://github.com/LisitSPA/DDC.Admin.Front" },
