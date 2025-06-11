@@ -3,7 +3,12 @@ targetScope = 'resourceGroup'
 param location string = resourceGroup().location
 param appServicePlanNameAdministracion string
 param appServiceAdministracion1 string
-
+param staticwebAppQAName string
+param staticwebAppQAsku string
+param staticwebAppQAtag string
+param staticwebAppQArepo string
+param staticwebAppQAbranch string
+param staticwebAppQAprovider string
 
 module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep' = {
   name: 'deployAppServicePlan'
@@ -25,4 +30,17 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     appServicePlan
   ]
 
+}
+
+module staticWebAppQA 'modules/staticWebApp/staticWebApp.bicep' = {
+  name: 'staticWebAppQA'
+  params: {
+    staticWebAppName: staticwebAppQAName
+    location: location
+    skuName: staticwebAppQAsku
+    tag: staticwebAppQAtag
+    repositoryUrl: staticwebAppQArepo
+    branch: staticwebAppQAbranch
+    provider: staticwebAppQAprovider
+  }
 }

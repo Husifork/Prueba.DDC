@@ -6,6 +6,12 @@ param storageAccountName2 string
 param storageAccountName3 string
 param appServicePlanNameAdministracion string
 param appServiceAdministracion1 string
+param staticwebAppPRName string
+param staticwebAppPRsku string
+param staticwebAppPRtag string
+param staticwebAppPRrepo string
+param staticwebAppPRbranch string
+param staticwebAppPRprovider string
 
 
 module storagePortal1 'modules/storageAccount/storageAccount.bicep' = {
@@ -51,4 +57,17 @@ module appService1 'modules/appService/appService.bicep' = {
      dependsOn: [
     appServicePlan
   ]
+}
+
+module staticWebAppQA 'modules/staticWebApp/staticWebApp.bicep' = {
+  name: 'staticWebAppQA'
+  params: {
+    staticWebAppName: staticwebAppPRName
+    location: location
+    skuName: staticwebAppPRsku
+    tag: staticwebAppPRtag
+    repositoryUrl: staticwebAppPRrepo
+    branch: staticwebAppPRbranch
+    provider: staticwebAppPRprovider
+  }
 }
