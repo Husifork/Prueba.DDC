@@ -3,8 +3,9 @@ targetScope = 'resourceGroup'
 param location string = resourceGroup().location
 param tagproyecto string
 param tagambiente string
-param appServicePlanNameAdministracion string
-param appServiceAdministracion1 string
+param appServicePlanNameGestorDocumental string
+param appServiceGestorDocumental string
+param appServiceGestorDocumentalkind string
 param staticwebAppQAName string
 param staticwebAppQAsku string
 param staticwebAppQArepo string
@@ -15,9 +16,10 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
   name: 'deployAppServicePlan'
   params: {
     location: location
-    appServicePlanName: appServicePlanNameAdministracion
+    appServicePlanName: appServicePlanNameGestorDocumental
     tagproyecto: tagproyecto
     tagambiente: tagambiente
+    kind: appServiceGestorDocumentalkind
   }
 }
 
@@ -25,13 +27,13 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
   name: 'deployAppService1'
   params: {
     location: location
-    appServiceName: appServiceAdministracion1
-    appServicePlanName: appServicePlanNameAdministracion
+    appServiceName: appServiceGestorDocumental
+    appServicePlanName: appServicePlanNameGestorDocumental
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-
-      }
-  dependsOn: [
+    kind: appServiceGestorDocumentalkind
+  }
+    dependsOn: [
     appServicePlan
   ]
 

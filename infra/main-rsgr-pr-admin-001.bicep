@@ -4,10 +4,12 @@ param location string = resourceGroup().location
 param tagproyecto string
 param tagambiente string
 param storageAccountName1 string
-param appServicePlanNameAdministracion1 string
-param appServicePlanNameAdministracion2 string
-param appServiceAdministracion1 string
-param appServiceAdministracion2 string
+param appServicePlanNameGestorDocApi string
+param appServicePlanNameGestorDocumental string
+param appServicegestordocapi string
+param appServicegestordocapkind string
+param appServiceGestorDocumental string
+param appServiceGestorDocumentalkind string
 param staticwebAppPRName string
 param staticwebAppPRsku string
 param staticwebAppPRrepo string
@@ -29,9 +31,10 @@ module appServicePlan1 'modules/appServicePlan/appServicePlanAdministrador.bicep
   name: 'deployAppServicePlan1'
   params: {
     location: location
-    appServicePlanName: appServicePlanNameAdministracion1
+    appServicePlanName: appServicePlanNameGestorDocumental
     tagproyecto: tagproyecto
     tagambiente: tagambiente
+    kind: appServiceGestorDocumentalkind
   }
 }
 
@@ -39,39 +42,42 @@ module appServicePlan2 'modules/appServicePlan/appServicePlanAdministrador.bicep
   name: 'deployAppServicePlan2'
   params: {
     location: location
-    appServicePlanName: appServicePlanNameAdministracion2
+    appServicePlanName: appServicePlanNameGestorDocApi
     tagproyecto: tagproyecto
     tagambiente: tagambiente
+    kind: appServicegestordocapkind
   }
 }
 
 module appService1 'modules/appService/appService.bicep' = {
-  name: 'deployAppService1'
+  name: 'deployAppServiceGestorDocumental'
   params: {
     location: location
-    appServiceName: appServiceAdministracion1
-    appServicePlanName: appServicePlanNameAdministracion1
+    appServiceName: appServiceGestorDocumental
+    appServicePlanName: appServicePlanNameGestorDocumental
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-
-   }
-     dependsOn: [
-    appServicePlan1
-  ]
-}
-
-module appService2 'modules/appService/appService.bicep' = {
-  name: 'deployAppService2'
-  params: {
-    location: location
-    appServiceName: appServiceAdministracion2
-    appServicePlanName: appServicePlanNameAdministracion2
-    tagproyecto: tagproyecto
-    tagambiente: tagambiente
+    kind: appServiceGestorDocumentalkind
 
    }
      dependsOn: [
     appServicePlan2
+  ]
+}
+
+module appService2 'modules/appService/appService.bicep' = {
+  name: 'deployAppServicegestordocapi1'
+  params: {
+    location: location
+    appServiceName: appServicegestordocapi
+    appServicePlanName: appServicePlanNameGestorDocApi
+    tagproyecto: tagproyecto
+    tagambiente: tagambiente
+    kind: appServicegestordocapkind
+
+   }
+     dependsOn: [
+    appServicePlan1
   ]
 }
 

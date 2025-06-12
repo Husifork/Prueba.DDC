@@ -2,6 +2,7 @@ param location string
 param appServicePlanName string
 param tagproyecto string
 param tagambiente string
+param kind string
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2024-04-01' = {
   name: appServicePlanName
@@ -17,7 +18,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2024-04-01' = {
     family: 'F'
     capacity: 0
   }
-  kind: 'app'
+  kind: kind
   properties: {
     perSiteScaling: false
     elasticScaleEnabled: false

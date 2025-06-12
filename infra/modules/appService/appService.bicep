@@ -3,6 +3,7 @@ param appServiceName string
 param appServicePlanName string
 param tagproyecto string
 param tagambiente string
+param kind string
 
 resource appService 'Microsoft.Web/sites@2024-04-01' = {
   name: appServiceName
@@ -11,7 +12,7 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
     Proyecto: tagproyecto
     Ambiente: tagambiente
   }
-  kind: 'app'
+  kind: kind
   properties: {
     enabled: true
     hostNameSslStates: [

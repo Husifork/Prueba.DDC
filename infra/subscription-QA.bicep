@@ -3,8 +3,9 @@ targetScope = 'subscription'
 param location string
 param tagproyecto string
 param tagambiente string
-param appServicePlanNameAdministracion string
-param appServiceAdministracion1 string
+param appServicePlanNameGestorDocumental string
+param appServiceGestorDocumental string
+param appServiceGestorDocumentalkind string
 param staticwebAppQAName string
 param staticwebAppQAsku string
 param staticwebAppQArepo string
@@ -20,8 +21,9 @@ module qa 'main-rsgr-qa-admin-001.bicep' = {
         location: location
         tagproyecto: tagproyecto
         tagambiente: tagambiente
-        appServicePlanNameAdministracion: appServicePlanNameAdministracion
-        appServiceAdministracion1: appServiceAdministracion1
+        appServicePlanNameGestorDocumental: appServicePlanNameGestorDocumental
+        appServiceGestorDocumental: appServiceGestorDocumental
+        appServiceGestorDocumentalkind : appServiceGestorDocumentalkind
         staticwebAppQAName : staticwebAppQAName
         staticwebAppQAsku : staticwebAppQAsku
         staticwebAppQArepo : staticwebAppQArepo
