@@ -8,7 +8,7 @@
     "appServicePlanNameAdministracion1":  { "value": "ASPL-PR-GESTORCARGA-001" },
     "appServicePlanNameAdministracion2":  { "value": "ASPL-PR-GESTORCARGA-002" },
     "appServiceAdministracion1":          { "value": "APSV-PR-GESTORCARGA-001" },
-    "appServiceAdministracion2":          { "value": "APSV-PR-GESTORCARGA-001" },
+    "appServiceAdministracion2":          { "value": "APSV-PR-GESTORCARGA-002" },
     "storageAccountName1":                { "value": "stacprgestorcarga001" },
     "staticwebAppPRName":                 { "value": "gestor-carga-prod" },
     "staticwebAppPRsku":                  { "value": "Free" },
