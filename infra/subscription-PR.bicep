@@ -6,7 +6,7 @@ param appServicePlanNameGestorDocApi string
 param appServiceGestorDocumental string
 param appServicegestordocapi string
 param appServiceGestorDocumentalkind string
-param appServicegestordocapkind string
+param appServicegestordocapikind string
 param location string
 param tagproyecto string
 param tagambiente string
@@ -30,7 +30,7 @@ module pr 'main-rsgr-pr-admin-001.bicep' = {
         appServiceGestorDocumental: appServiceGestorDocumental
         appServicegestordocapi: appServicegestordocapi
         appServiceGestorDocumentalkind : appServiceGestorDocumentalkind
-        appServicegestordocapkind : appServicegestordocapkind
+        appServicegestordocapikind : appServicegestordocapikind
         storageAccountName1: storageAccountName1
         staticwebAppPRName : staticwebAppPRName
         staticwebAppPRsku : staticwebAppPRsku

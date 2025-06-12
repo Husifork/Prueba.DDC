@@ -7,7 +7,7 @@ param storageAccountName1 string
 param appServicePlanNameGestorDocApi string
 param appServicePlanNameGestorDocumental string
 param appServicegestordocapi string
-param appServicegestordocapkind string
+param appServicegestordocapikind string
 param appServiceGestorDocumental string
 param appServiceGestorDocumentalkind string
 param staticwebAppPRName string
@@ -45,7 +45,7 @@ module appServicePlan2 'modules/appServicePlan/appServicePlanAdministrador.bicep
     appServicePlanName: appServicePlanNameGestorDocApi
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-    kind: appServicegestordocapkind
+    kind: appServicegestordocapikind
   }
 }
 
@@ -73,7 +73,7 @@ module appService2 'modules/appService/appService.bicep' = {
     appServicePlanName: appServicePlanNameGestorDocApi
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-    kind: appServicegestordocapkind
+    kind: appServicegestordocapikind
 
    }
      dependsOn: [
