@@ -12,6 +12,7 @@ param staticwebAppQArepo string
 param staticwebAppQAbranch string
 param staticwebAppQAprovider string
 
+
 module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep' = {
   name: 'deployAppServicePlan'
   params: {
@@ -20,6 +21,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     kind: appServiceGestorDocumentalkind
+    reserved: true
   }
 }
 
@@ -32,6 +34,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     kind: appServiceGestorDocumentalkind
+    reserved: true
   }
     dependsOn: [
     appServicePlan

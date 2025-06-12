@@ -4,6 +4,7 @@ param appServicePlanName string
 param tagproyecto string
 param tagambiente string
 param kind string
+param reserved bool
 
 resource appService 'Microsoft.Web/sites@2024-04-01' = {
   name: appServiceName
@@ -28,7 +29,7 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
       }
     ]
     serverFarmId: appServicePlanName
-    reserved: false
+    reserved: reserved
     isXenon: false
     hyperV: false
     dnsConfiguration: {}

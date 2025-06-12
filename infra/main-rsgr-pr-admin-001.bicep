@@ -35,6 +35,7 @@ module appServicePlan1 'modules/appServicePlan/appServicePlanAdministrador.bicep
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     kind: appServiceGestorDocumentalkind
+    reserved: true  
   }
 }
 
@@ -46,6 +47,7 @@ module appServicePlan2 'modules/appServicePlan/appServicePlanAdministrador.bicep
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     kind: appServicegestordocapikind
+    reserved: false
   }
 }
 
@@ -58,7 +60,7 @@ module appService1 'modules/appService/appService.bicep' = {
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     kind: appServiceGestorDocumentalkind
-
+    reserved: true
    }
      dependsOn: [
     appServicePlan2
@@ -74,7 +76,7 @@ module appService2 'modules/appService/appService.bicep' = {
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     kind: appServicegestordocapikind
-
+    reserved: false
    }
      dependsOn: [
     appServicePlan1

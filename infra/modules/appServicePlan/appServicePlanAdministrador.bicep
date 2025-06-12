@@ -3,6 +3,7 @@ param appServicePlanName string
 param tagproyecto string
 param tagambiente string
 param kind string
+param reserved bool
 
 resource appServicePlan 'Microsoft.Web/serverfarms@2024-04-01' = {
   name: appServicePlanName
@@ -24,7 +25,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2024-04-01' = {
     elasticScaleEnabled: false
     maximumElasticWorkerCount: 1
     isSpot: false
-    reserved: false
+    reserved: reserved
     isXenon: false
     hyperV: false
     targetWorkerCount: 0
