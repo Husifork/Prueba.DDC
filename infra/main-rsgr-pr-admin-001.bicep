@@ -63,7 +63,7 @@ module appService1 'modules/appService/appService.bicep' = {
     reserved: true
    }
      dependsOn: [
-    appServicePlan2
+    appServicePlan1
   ]
 }
 
@@ -79,7 +79,7 @@ module appService2 'modules/appService/appService.bicep' = {
     reserved: false
    }
      dependsOn: [
-    appServicePlan1
+    appServicePlan2
   ]
 }
 
