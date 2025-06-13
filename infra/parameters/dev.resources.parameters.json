@@ -8,7 +8,7 @@
     "appServicePlanNamePortalProductores":  { "value": "ASPL-QA-PTLPRODUCTORES-001" },
     "appServicePortalProductoresApi":       { "value": "APSV-QA-PTLPRODUCTORES-001" },
     "appServicePortalProductores":          { "value": "APSV-QA-PTLPRODUCTORES-002" },
-    "appServicePortalProductoreskind":      { "value": "app,linux" },
+    "appServicePortalProductoreskind":      { "value": "linux" },
     "staticwebAppQAName":                   { "value": "portal-productores-qa-bicep" },
     "staticwebAppQAsku":                    { "value": "Free" },
     "staticwebAppQArepo":                   { "value": "https://github.com/LisitSPA/PortalProductores.Front" },
