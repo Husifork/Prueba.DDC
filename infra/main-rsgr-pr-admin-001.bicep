@@ -20,7 +20,7 @@ module appServicePlan1 'modules/appServicePlan/appServicePlanAdministrador.bicep
     appServicePlanName: appServicePlanNamePortalProductores
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-    kind: appServicePortalProductoreskind
+    kind: 'app'
     reserved: false  
   }
 }
