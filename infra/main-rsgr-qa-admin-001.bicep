@@ -3,48 +3,59 @@ targetScope = 'resourceGroup'
 param location string = resourceGroup().location
 param tagproyecto string
 param tagambiente string
-param appServicePlanNameGestorDocumental string
-param appServiceGestorDocumental string
-param appServiceGestorDocumentalkind string
+param appServicePlanNamePortalProductores string
+param appServicePortalProductoresApi string
+param appServicePortalProductores string
+param appServicePortalProductoreskind string
 param staticwebAppQAName string
 param staticwebAppQAsku string
 param staticwebAppQArepo string
 param staticwebAppQAbranch string
 param staticwebAppQAprovider string
-/*param sqlServerName string
-param sqlAdministratorLogin string
-param sqlAdministratorPassword string
-param sqlDatabaseName string
-param sqlDatabaseSku string*/
 
 
 module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep' = {
-  name: 'deployAppServicePlan'
+  name: 'deployAppServicePlanPortalProductores'
   params: {
     location: location
-    appServicePlanName: appServicePlanNameGestorDocumental
+    appServicePlanName: appServicePlanNamePortalProductores
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-    kind: appServiceGestorDocumentalkind
+    kind: appServicePortalProductoreskind
     reserved: true
   }
 }
 
  module appService1 'modules/appService/appService.bicep' = {
-  name: 'deployAppService1'
+  name: 'deployAppServicePortalProductoresApiQA'
   params: {
     location: location
-    appServiceName: appServiceGestorDocumental
-    appServicePlanName: appServicePlanNameGestorDocumental
+    appServiceName: appServicePortalProductoresApi
+    appServicePlanName: appServicePlanNamePortalProductores
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-    kind: appServiceGestorDocumentalkind
+    kind: appServicePortalProductoreskind
     reserved: true
   }
     dependsOn: [
     appServicePlan
   ]
+}
 
+ module appService2 'modules/appService/appService.bicep' = {
+  name: 'deployAppService2'
+  params: {
+    location: location
+    appServiceName: appServicePortalProductores
+    appServicePlanName: appServicePlanNamePortalProductores
+    tagproyecto: tagproyecto
+    tagambiente: tagambiente
+    kind: appServicePortalProductoreskind
+    reserved: true
+  }
+    dependsOn: [
+    appServicePlan
+  ]
 }
 
 module staticWebAppQA 'modules/staticWebApp/staticWebApp.bicep' = {
@@ -61,27 +72,3 @@ module staticWebAppQA 'modules/staticWebApp/staticWebApp.bicep' = {
   }
 }
 
-//despliegue de SQL Server y base de datos
-/*module sqlServerModule 'modules/sqlServer/sqlServer.bicep' = {
-  name: 'sqlServerDeployment'
-  params: {
-    name: sqlServerName
-    location: location
-    administratorLogin: sqlAdministratorLogin
-    administratorLoginPassword: sqlAdministratorPassword
-    tagproyecto: tagproyecto
-    tagambiente: tagambiente
-  }
-}
-
-module sqlDatabaseModule 'modules/sqlDatabase/sqlDatabase.bicep' = {
-  name: 'sqlDatabaseDeployment'
-  params: {
-    name: sqlDatabaseName
-    location: location
-    serverName: sqlServerModule.outputs.serverName
-    skuName: sqlDatabaseSku
-    tagproyecto: tagproyecto
-    tagambiente: tagambiente
-  }
-}*/

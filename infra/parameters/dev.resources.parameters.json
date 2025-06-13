@@ -2,21 +2,17 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "location":                           { "value": "eastus2" },
-    "tagproyecto":                        { "value": "Gestor de Carga QA" },
-    "tagambiente":                        { "value": "QA" },
-    "appServicePlanNameGestorDocumental": { "value": "ASPL-QA-GESTORCARGA-001" },
-    "appServiceGestorDocumental":         { "value": "APSV-QA-GESTORCARGA-001" },
-    "appServiceGestorDocumentalkind":     { "value": "linux" },
-    "staticwebAppQAName":                 { "value": "gestor-documental-qa-bicep" },
-    "staticwebAppQAsku":                  { "value": "Free" },
-    "staticwebAppQArepo":                 { "value": "https://github.com/LisitSPA/GestorDocumental.Front" },
-    "staticwebAppQAbranch":               { "value": "QA" },
-    "staticwebAppQAprovider":             { "value": "GitHub" },
-    "sqlServerName":                      { "value": "asql-pr-gestorcarga-001" },
-    "sqlAdministratorLogin":              { "value": "" },
-    "sqlAdministratorPassword":           { "value": "" },
-    "sqlDatabaseName":                    { "value": "gestor-doc-bd-QA" },
-    "sqlDatabaseSku":                     { "value": "Basic" }
+    "location":                             { "value": "eastus2" },
+    "tagproyecto":                          { "value": "Portal Productores QA" },
+    "tagambiente":                          { "value": "QA" },
+    "appServicePlanNamePortalProductores":  { "value": "ASPL-QA-PTLPRODUCTORES-001" },
+    "appServicePortalProductoresApi":       { "value": "APSV-QA-PTLPRODUCTORES-001" },
+    "appServicePortalProductores":          { "value": "APSV-QA-PTLPRODUCTORES-002" },
+    "appServicePortalProductoreskind":      { "value": "app,linux" },
+    "staticwebAppQAName":                   { "value": "portal-productores-qa-bicep" },
+    "staticwebAppQAsku":                    { "value": "Free" },
+    "staticwebAppQArepo":                   { "value": "https://github.com/LisitSPA/PortalProductores.Front" },
+    "staticwebAppQAbranch":                 { "value": "QA" },
+    "staticwebAppQAprovider":               { "value": "GitHub" }
   }
 }

@@ -1,16 +1,12 @@
 targetScope = 'subscription'
 
 //param environment string 1 
-param appServicePlanNameGestorDocumental string
-param appServicePlanNameGestorDocApi string
-param appServiceGestorDocumental string
-param appServicegestordocapi string
-param appServiceGestorDocumentalkind string
-param appServicegestordocapikind string
 param location string
+param appServicePlanNamePortalProductores string
+param appServicePortalProductoresApi string
+param appServicePortalProductoreskind string
 param tagproyecto string
 param tagambiente string
-param storageAccountName1 string
 param staticwebAppPRName string
 param staticwebAppPRsku string
 param staticwebAppPRrepo string
@@ -25,13 +21,9 @@ module pr 'main-rsgr-pr-admin-001.bicep' = {
         location: location
         tagproyecto: tagproyecto
         tagambiente: tagambiente
-        appServicePlanNameGestorDocumental: appServicePlanNameGestorDocumental
-        appServicePlanNameGestorDocApi: appServicePlanNameGestorDocApi
-        appServiceGestorDocumental: appServiceGestorDocumental
-        appServicegestordocapi: appServicegestordocapi
-        appServiceGestorDocumentalkind : appServiceGestorDocumentalkind
-        appServicegestordocapikind : appServicegestordocapikind
-        storageAccountName1: storageAccountName1
+        appServicePlanNamePortalProductores: appServicePlanNamePortalProductores
+        appServicePortalProductoresApi: appServicePortalProductoresApi
+        appServicePortalProductoreskind : appServicePortalProductoreskind
         staticwebAppPRName : staticwebAppPRName
         staticwebAppPRsku : staticwebAppPRsku
         staticwebAppPRrepo : staticwebAppPRrepo

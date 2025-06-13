@@ -2,20 +2,16 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "location":                           { "value": "eastus2" },
-    "tagproyecto":                        { "value": "Gestor de Carga PR" },
-    "tagambiente":                        { "value": "PR" },
-    "appServicePlanNameGestorDocumental": { "value": "ASPL-PR-GESTORCARGA-001" },
-    "appServiceGestorDocumental":         { "value": "APSV-PR-GESTORCARGA-001" },
-    "appServiceGestorDocumentalkind":     { "value": "linux" },
-    "appServicePlanNameGestorDocApi":     { "value": "ASPL-PR-GESTORCARGA-002" },
-    "appServicegestordocapi":             { "value": "APSV-PR-GESTORCARGA-002" },
-    "appServicegestordocapikind":         { "value": "app" },
-    "storageAccountName1":                { "value": "stacprgestorcarga001" },
-    "staticwebAppPRName":                 { "value": "gestor-carga-prod" },
-    "staticwebAppPRsku":                  { "value": "Free" },
-    "staticwebAppPRrepo":                 { "value": "https://github.com/LisitSPA/GestorDocumental.Front" },
-    "staticwebAppPRbranch":               { "value": "main" },
-    "staticwebAppPRprovider":             { "value": "GitHub" }
+    "location":                             { "value": "eastus2" },
+    "tagproyecto":                          { "value": "Portal Productores PR" },
+    "tagambiente":                          { "value": "PR" },
+    "appServicePlanNamePortalProductores":  { "value": "ASPL-PR-PTLPRODUCTORES-001" },
+    "appServicePortalProductoresApi":       { "value": "APSV-PR-PTLPRODUCTORES-001" },
+    "appServicePortalProductoreskind":      { "value": "app" },
+    "staticwebAppPRName":                   { "value": "portal-productores-front-bicep" },
+    "staticwebAppPRsku":                    { "value": "Free" },
+    "staticwebAppPRrepo":                   { "value": "https://github.com/LisitSPA/PortalProductores.Front" },
+    "staticwebAppPRbranch":                 { "value": "main" },
+    "staticwebAppPRprovider":               { "value": "GitHub" }
     }
 }
