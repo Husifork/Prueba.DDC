@@ -35,7 +35,6 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     kind: appServicePortalProductoreskind
-    reserved: true
   }
     dependsOn: [
     appServicePlan
@@ -51,7 +50,6 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     kind: appServicePortalProductoreskind
-    reserved: true
   }
     dependsOn: [
     appServicePlan

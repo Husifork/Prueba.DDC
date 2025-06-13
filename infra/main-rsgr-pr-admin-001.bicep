@@ -35,7 +35,6 @@ module appService1 'modules/appService/appService.bicep' = {
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     kind: appServicePortalProductoreskind
-    reserved: false
    }
      dependsOn: [
     appServicePlan1
