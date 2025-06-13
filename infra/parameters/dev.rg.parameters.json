@@ -2,11 +2,11 @@
   "deployments": {
     "value": [
       {
-        "resourceGroupName": "RSGR-QA-GESTORCARGA-001",
+        "resourceGroupName": "RSGR-QA-PTLPRODUCTORES-001",
         "location": "eastus2"
       },
       {
-        "resourceGroupName": "RSGR-PR-GESTORCARGA-001",
+        "resourceGroupName": "RSGR-PR-PTLPRODUCTORES-001",
         "location": "eastus2"
       }
     ]

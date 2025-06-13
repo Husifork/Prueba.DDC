@@ -15,8 +15,8 @@ param staticwebAppPRprovider string
 
 
 module pr 'main-rsgr-pr-admin-001.bicep' = {
-  name: 'deployToRSGR-PR-ADMIN-001'
-  scope: resourceGroup('RSGR-PR-GESTORCARGA-001')
+  name: 'deployToRSGR-PR-PTLPRODUCTORES-001'
+  scope: resourceGroup('RSGR-PR-PTLPRODUCTORES-001')
   params: {
         location: location
         tagproyecto: tagproyecto

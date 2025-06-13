@@ -16,8 +16,8 @@ param staticwebAppQAprovider string
 
 // Para el despliegue de los recursos en el grupo de recursos RSGR-QA-ADMIN-001
 module qa 'main-rsgr-qa-admin-001.bicep' = {
-  name: 'deployToRSGR-QA-ADMIN-001'
-  scope: resourceGroup('RSGR-QA-GESTORCARGA-001')
+  name: 'deployToRSGR-QA-PTLPRODUCTORES'
+  scope: resourceGroup('RSGR-QA-PTLPRODUCTORES')
   params: {
         location: location
         tagproyecto: tagproyecto
