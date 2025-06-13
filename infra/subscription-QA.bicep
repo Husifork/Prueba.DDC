@@ -11,6 +11,11 @@ param staticwebAppQAsku string
 param staticwebAppQArepo string
 param staticwebAppQAbranch string
 param staticwebAppQAprovider string
+/*param sqlServerName string
+param sqlAdministratorLogin string
+param sqlAdministratorPassword string
+param sqlDatabaseName string
+param sqlDatabaseSku string */
 
 
 // Para el despliegue de los recursos en el grupo de recursos RSGR-QA-ADMIN-001
@@ -29,6 +34,10 @@ module qa 'main-rsgr-qa-admin-001.bicep' = {
         staticwebAppQArepo : staticwebAppQArepo
         staticwebAppQAbranch : staticwebAppQAbranch
         staticwebAppQAprovider : staticwebAppQAprovider
-
+ /*       sqlServerName: sqlServerName
+        sqlAdministratorLogin: sqlAdministratorLogin
+        sqlAdministratorPassword: sqlAdministratorPassword
+        sqlDatabaseName: sqlDatabaseName
+        sqlDatabaseSku: sqlDatabaseSku */
   }
 }

@@ -12,6 +12,11 @@
     "staticwebAppQAsku":                  { "value": "Free" },
     "staticwebAppQArepo":                 { "value": "https://github.com/LisitSPA/GestorDocumental.Front" },
     "staticwebAppQAbranch":               { "value": "QA" },
-    "staticwebAppQAprovider":             { "value": "GitHub" }
+    "staticwebAppQAprovider":             { "value": "GitHub" },
+    "sqlServerName":                      { "value": "asql-pr-gestorcarga-001" },
+    "sqlAdministratorLogin":              { "value": "" },
+    "sqlAdministratorPassword":           { "value": "" },
+    "sqlDatabaseName":                    { "value": "gestor-doc-bd-QA" },
+    "sqlDatabaseSku":                     { "value": "Basic" }
   }
 }

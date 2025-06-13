@@ -96,3 +96,4 @@ module staticWebAppQA 'modules/staticWebApp/staticWebApp.bicep' = {
     provider: staticwebAppPRprovider
   }
 }
+

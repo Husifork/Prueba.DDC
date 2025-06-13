@@ -11,6 +11,11 @@ param staticwebAppQAsku string
 param staticwebAppQArepo string
 param staticwebAppQAbranch string
 param staticwebAppQAprovider string
+/*param sqlServerName string
+param sqlAdministratorLogin string
+param sqlAdministratorPassword string
+param sqlDatabaseName string
+param sqlDatabaseSku string*/
 
 
 module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep' = {
@@ -55,3 +60,28 @@ module staticWebAppQA 'modules/staticWebApp/staticWebApp.bicep' = {
     provider: staticwebAppQAprovider
   }
 }
+
+//despliegue de SQL Server y base de datos
+/*module sqlServerModule 'modules/sqlServer/sqlServer.bicep' = {
+  name: 'sqlServerDeployment'
+  params: {
+    name: sqlServerName
+    location: location
+    administratorLogin: sqlAdministratorLogin
+    administratorLoginPassword: sqlAdministratorPassword
+    tagproyecto: tagproyecto
+    tagambiente: tagambiente
+  }
+}
+
+module sqlDatabaseModule 'modules/sqlDatabase/sqlDatabase.bicep' = {
+  name: 'sqlDatabaseDeployment'
+  params: {
+    name: sqlDatabaseName
+    location: location
+    serverName: sqlServerModule.outputs.serverName
+    skuName: sqlDatabaseSku
+    tagproyecto: tagproyecto
+    tagambiente: tagambiente
+  }
+}*/
