@@ -26,7 +26,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
   }
 }
 
- module appService1 'modules/appService/appService.bicep' = {
+ module appService1 'modules/appService/appService_linux.bicep' = {
   name: 'deployAppServicePortalProductoresApiQA'
   params: {
     location: location
@@ -35,7 +35,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     virtualNetworkSubnetId: ''
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-    runtime: 'DOTNET|8.0' //.NET 8.0
+    linuxFxVersion: 'DOTNET|8.0' //.NET 8.0
     kind: appServicePortalProductoreskind
     reserved: true
   }
@@ -44,7 +44,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
   ]
 }
 
- module appService2 'modules/appService/appService.bicep' = {
+ module appService2 'modules/appService/appService_linux.bicep' = {
   name: 'deployAppService2'
   params: {
     location: location
@@ -53,7 +53,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     virtualNetworkSubnetId: ''
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-    runtime: 'DOTNET|8.0' //.NET 8.0
+    linuxFxVersion: 'DOTNET|8.0' //.NET 8.0
     kind: appServicePortalProductoreskind
     reserved: true
   }
