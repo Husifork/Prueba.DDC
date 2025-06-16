@@ -17,7 +17,7 @@ param staticwebAppPRsku string
 param staticwebAppPRrepo string
 param staticwebAppPRbranch string
 param staticwebAppPRprovider string
-param minTlsCipherSuite string
+
 
 module vnet 'modules/vnet/vnet.bicep' = {
   name: 'vnet'
@@ -61,7 +61,7 @@ module appService1 'modules/appService/appService_windows.bicep' = {
     netFrameworkVersion: 'v8.0' //.NET 8.0
     kind: appServicePortalProductoreskind
     reserved: false 
-    minTlsCipherSuite: 'TLS_RSA_WITH_AES_128_CBC_SHA256'
+    minTlsCipherSuite: 'TLSCipherSuiteOrderDefault'
     CURRENT_STACK: 'dotnet'
    }
      dependsOn: [
