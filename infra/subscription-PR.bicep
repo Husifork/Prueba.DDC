@@ -4,9 +4,9 @@ targetScope = 'subscription'
 param location string
 param tagproyecto string
 param tagambiente string
-param appServicePlanNameCredenciales string
+/*aram appServicePlanNameCredenciales string
 param appServiceCredenciales string
-param appServiceCredencialeskind string
+param appServiceCredencialeskind string*/
 param staticwebAppPRName string
 param staticwebAppPRsku string
 param staticwebAppPRrepo string
@@ -15,15 +15,15 @@ param staticwebAppPRprovider string
 
 
 module pr 'main-rsgr-pr-credenciales-001.bicep' = {
-  name: 'deployToRSGR-PR-CREDENCIALES-004'
-  scope: resourceGroup('RSGR-PR-CREDENCIALES-004')
+  name: 'deployToRSGR-PR-VISUALIZADOR-001'
+  scope: resourceGroup('RSGR-PR-VISUALIZADOR-001')
   params: {
         location: location
         tagproyecto: tagproyecto
         tagambiente: tagambiente
-        appServicePlanNameCredenciales : appServicePlanNameCredenciales
+       /* appServicePlanNameCredenciales : appServicePlanNameCredenciales
         appServiceCredenciales : appServiceCredenciales
-        appServiceCredencialeskind : appServiceCredencialeskind
+        appServiceCredencialeskind : appServiceCredencialeskind */
         staticwebAppPRName : staticwebAppPRName
         staticwebAppPRsku : staticwebAppPRsku
         staticwebAppPRrepo : staticwebAppPRrepo

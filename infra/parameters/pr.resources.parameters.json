@@ -3,14 +3,11 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "location":                             { "value": "centralus" },
-    "tagproyecto":                          { "value": "Credenciales PR" },
+    "tagproyecto":                          { "value": "Visualizador PR" },
     "tagambiente":                          { "value": "PR" },
-    "appServicePlanNameCredenciales":       { "value": "ASPL-PR-CREDENCIALES-001" },
-    "appServiceCredenciales":               { "value": "APSV-PR-CREDENCIALES-001" },
-    "appServiceCredencialeskind":           { "value": "app" },
-    "staticwebAppPRName":                   { "value": "credenciales-bicep" },
+    "staticwebAppPRName":                   { "value": "visualizador-bicep" },
     "staticwebAppPRsku":                    { "value": "Free" },
-    "staticwebAppPRrepo":                   { "value": "https://github.com/LisitSPA/credenciales/tree/main" },
+    "staticwebAppPRrepo":                   { "value": "https://github.com/LisitSPA/Visualizador.Front" },
     "staticwebAppPRbranch":                 { "value": "main" },
     "staticwebAppPRprovider":               { "value": "GitHub" }
     }

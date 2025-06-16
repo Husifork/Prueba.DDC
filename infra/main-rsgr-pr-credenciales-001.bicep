@@ -3,9 +3,9 @@ targetScope = 'resourceGroup'
 param location string = resourceGroup().location
 param tagproyecto string
 param tagambiente string
-param appServicePlanNameCredenciales string
+/*param appServicePlanNameCredenciales string
 param appServiceCredenciales string
-param appServiceCredencialeskind string
+param appServiceCredencialeskind string */
 param staticwebAppPRName string
 param staticwebAppPRsku string
 param staticwebAppPRrepo string
@@ -13,7 +13,7 @@ param staticwebAppPRbranch string
 param staticwebAppPRprovider string
 
 
-module appServicePlan1 'modules/appServicePlan/appServicePlan.bicep' = {
+/*module appServicePlan1 'modules/appServicePlan/appServicePlan.bicep' = {
   name: 'deployAppServicePlanCredencialesPR'
   params: {
     location: location
@@ -46,7 +46,7 @@ module appService1 'modules/appService/appService_windows.bicep' = {
   ]
 }
 
-
+*/
 module staticWebAppQA 'modules/staticWebApp/staticWebApp.bicep' = {
   name: 'staticWebAppPR'
   params: {
