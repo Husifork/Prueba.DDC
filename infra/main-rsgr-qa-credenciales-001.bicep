@@ -4,13 +4,13 @@ param location string = resourceGroup().location
 param tagproyecto string
 param tagambiente string
 param appServicePlanNameCredenciales string
-param appServiceCredenciales string
+/*param appServiceCredenciales string
 param appServiceCredencialeskind string
 param staticwebAppQAName string
 param staticwebAppQAsku string
 param staticwebAppQArepo string
 param staticwebAppQAbranch string
-param staticwebAppQAprovider string
+param staticwebAppQAprovider string*/
 
 
 module appServicePlan 'modules/appServicePlan/appServicePlan.bicep' = {
@@ -25,7 +25,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlan.bicep' = {
   }
 }
 
- module appService1 'modules/appService/appService_windows.bicep' = {
+/*module appService1 'modules/appService/appService_windows.bicep' = {
   name: 'deployAppServiceCredencialesQA'
   params: {
     location: location
@@ -60,3 +60,4 @@ module staticWebAppQA 'modules/staticWebApp/staticWebApp.bicep' = {
   }
 }
 
+*/
