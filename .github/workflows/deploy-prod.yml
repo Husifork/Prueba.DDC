@@ -24,7 +24,7 @@ jobs:
       with:
         inlineScript: |
           az deployment sub create \
-            --location eastus \
+            --location centralus \
             --template-file infra/rg.bicep \
             --parameters infra/parameters/dev.rg.parameters.json
 
@@ -33,6 +33,6 @@ jobs:
       with:
         inlineScript: |
           az deployment sub create \
-            --location eastus \
+            --location centralus \
             --template-file infra/subscription-PR.bicep \
             --parameters infra/parameters/pr.resources.parameters.json
