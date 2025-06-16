@@ -5,6 +5,8 @@ param tagproyecto string
 param tagambiente string
 param kind string
 param reserved bool
+param virtualNetworkSubnetId string
+param runtime string
 
 resource appService 'Microsoft.Web/sites@2024-04-01' = {
   name: appServiceName
@@ -36,8 +38,10 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
     vnetRouteAllEnabled: false
     vnetImagePullEnabled: false
     vnetContentShareEnabled: false
+    virtualNetworkSubnetId: empty(virtualNetworkSubnetId) ? null : virtualNetworkSubnetId
     siteConfig: {
       numberOfWorkers: 1
+      netFrameworkVersion: runtime
       acrUseManagedIdentityCreds: false
       alwaysOn: false
       http20Enabled: false
@@ -63,7 +67,7 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
   }
 }
 
-resource sites_administrador_api_name_web 'Microsoft.Web/sites/config@2024-04-01' = {
+/*resource sites_administrador_api_name_web 'Microsoft.Web/sites/config@2024-04-01' = {
   parent: appService
   name: 'web'
   properties: {
@@ -89,7 +93,7 @@ resource sites_administrador_api_name_web 'Microsoft.Web/sites/config@2024-04-01
     scmType: 'GitHubAction'
     use32BitWorkerProcess: true
     webSocketsEnabled: false
-    alwaysOn: false
+    alwaysOn: false //se mantiene así mientras sea free
     managedPipelineMode: 'Integrated'
     virtualApplications: [
       {
@@ -136,7 +140,7 @@ resource sites_administrador_api_name_web 'Microsoft.Web/sites/config@2024-04-01
     minimumElasticInstanceCount: 0
     azureStorageAccounts: {}
   }
-}
+}*/
 
 /*resource sites_administrador_api_name_sites_administrador_api_name_azurewebsites_net 'Microsoft.Web/sites/hostNameBindings@2024-04-01' = {
   parent: sites_administrador_api_name_resource

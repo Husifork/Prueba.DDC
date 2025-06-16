@@ -3,6 +3,12 @@ targetScope = 'resourceGroup'
 param location string = resourceGroup().location
 param tagproyecto string
 param tagambiente string
+param vnetName string //*
+param addressPrefix string //'10.5.0.0/16'
+param gatewaySubnetName string //GatewaySubnet
+param gatewaySubnetPrefix string // '10.5.1.0/24'
+param appSubnetName string // 'subred-net'
+param appSubnetPrefix string // '10.5.0.0/24'
 param appServicePlanNamePortalProductores string
 param appServicePortalProductoresApi string
 param appServicePortalProductoreskind string
@@ -11,6 +17,22 @@ param staticwebAppPRsku string
 param staticwebAppPRrepo string
 param staticwebAppPRbranch string
 param staticwebAppPRprovider string
+
+module vnet 'modules/vnet/vnet.bicep' = {
+  name: 'vnet'
+  params: {
+    vnetName: vnetName
+    location: location
+    addressPrefix: addressPrefix
+    gatewaySubnetName: gatewaySubnetName
+    gatewaySubnetPrefix: gatewaySubnetPrefix
+    appSubnetName: appSubnetName
+    appSubnetPrefix: appSubnetPrefix
+    enableDelegation: true // o false, según si quieres la delegación
+    tagproyecto: tagproyecto
+    tagambiente: tagambiente
+  }
+}
 
 
 module appServicePlan1 'modules/appServicePlan/appServicePlanAdministrador.bicep' = {
@@ -27,18 +49,21 @@ module appServicePlan1 'modules/appServicePlan/appServicePlanAdministrador.bicep
 
 
 module appService1 'modules/appService/appService.bicep' = {
-  name: 'deployAppServiceGestorDocumental'
+  name: 'deployAppServicePortalProductoresApi'
   params: {
     location: location
     appServiceName: appServicePortalProductoresApi
     appServicePlanName: appServicePlanNamePortalProductores
+    virtualNetworkSubnetId: vnet.outputs.appSubnetId
     tagproyecto: tagproyecto
     tagambiente: tagambiente
+    runtime: 'v8.0' //.NET 8.0
     kind: appServicePortalProductoreskind
     reserved: false 
    }
      dependsOn: [
     appServicePlan1
+    vnet
   ]
 }
 
