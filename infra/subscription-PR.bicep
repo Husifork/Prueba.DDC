@@ -1,6 +1,6 @@
 targetScope = 'subscription'
 
-//param environment string 1 
+//param environment string  
 param location string
 param tagproyecto string
 param tagambiente string
