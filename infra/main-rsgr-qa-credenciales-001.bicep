@@ -21,7 +21,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlan.bicep' = {
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     kind: 'app'
-    reserved: true
+    reserved: false
   }
 }
 
