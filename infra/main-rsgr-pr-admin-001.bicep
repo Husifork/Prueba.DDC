@@ -35,7 +35,7 @@ module vnet 'modules/vnet/vnet.bicep' = {
 }
 
 
-module appServicePlan1 'modules/appServicePlan/appServicePlanAdministrador.bicep' = {
+module appServicePlan1 'modules/appServicePlan/appServicePlan.bicep' = {
   name: 'deployAppServicePlan1'
   params: {
     location: location

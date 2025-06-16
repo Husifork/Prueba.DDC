@@ -14,7 +14,7 @@ param staticwebAppQAbranch string
 param staticwebAppQAprovider string
 
 
-module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep' = {
+module appServicePlan 'modules/appServicePlan/appServicePlan.bicep' = {
   name: 'deployAppServicePlanPortalProductores'
   params: {
     location: location
