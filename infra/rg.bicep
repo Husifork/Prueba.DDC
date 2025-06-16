@@ -6,3 +6,4 @@ resource rgs 'Microsoft.Resources/resourceGroups@2022-09-01' = [for d in deploym
   name: d.resourceGroupName
   location: d.location
 }]
+ 

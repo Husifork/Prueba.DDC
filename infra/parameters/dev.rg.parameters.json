@@ -2,11 +2,11 @@
   "deployments": {
     "value": [
       {
-        "resourceGroupName": "RSGR-QA-CREDENCIALES-001",
+        "resourceGroupName": "RSGR-QA-CREDENCIALES-004",
         "location": "centralus"
       },
       {
-        "resourceGroupName": "RSGR-PR-CREDENCIALES-001",
+        "resourceGroupName": "RSGR-PR-CREDENCIALES-004",
         "location": "centralus"
       }
     ]
