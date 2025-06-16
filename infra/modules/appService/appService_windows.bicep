@@ -6,7 +6,7 @@ param tagambiente string
 param kind string
 param reserved bool
 param virtualNetworkSubnetId string
-param runtime string
+param netFrameworkVersion string
 
 resource appService 'Microsoft.Web/sites@2024-04-01' = {
   name: appServiceName
@@ -41,7 +41,7 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
     virtualNetworkSubnetId: empty(virtualNetworkSubnetId) ? null : virtualNetworkSubnetId
     siteConfig: {
       numberOfWorkers: 1
-      netFrameworkVersion: runtime
+      netFrameworkVersion: netFrameworkVersion
       acrUseManagedIdentityCreds: false
       alwaysOn: false
       http20Enabled: true

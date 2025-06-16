@@ -57,7 +57,7 @@ module appService1 'modules/appService/appService_windows.bicep' = {
     virtualNetworkSubnetId: '' //vnet.outputs.appSubnetId
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-    runtime: 'v8.0' //.NET 8.0
+    netFrameworkVersion: 'v8.0' //.NET 8.0
     kind: appServicePortalProductoreskind
     reserved: false 
    }
