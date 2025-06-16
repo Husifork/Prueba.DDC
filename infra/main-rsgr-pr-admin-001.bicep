@@ -61,7 +61,7 @@ module appService1 'modules/appService/appService_windows.bicep' = {
     netFrameworkVersion: 'v8.0' //.NET 8.0
     kind: appServicePortalProductoreskind
     reserved: false 
-    minTlsCipherSuite: 'TLSCipherSuiteOrderDefault'
+    minTlsCipherSuite: 'TLS_RSA_WITH_AES_128_CBC_SHA'
     CURRENT_STACK: 'dotnet'
    }
      dependsOn: [
