@@ -10,7 +10,7 @@ param staticwebAppQAName string
 param staticwebAppQAsku string
 param staticwebAppQArepo string
 param staticwebAppQAbranch string
-param staticwebAppQAprovider string*/
+param staticwebAppQAprovider string */
 
 
 module appServicePlan 'modules/appServicePlan/appServicePlan.bicep' = {
