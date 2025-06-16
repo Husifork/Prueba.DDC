@@ -5,7 +5,7 @@
     "location":                             { "value": "centralus" },
     "tagproyecto":                          { "value": "Visualizador QA" },
     "tagambiente":                          { "value": "QA" },
-    "staticwebAppQAName":                   { "value": "visualizador-QA-bicep" },
+    "staticwebAppQAName":                   { "value": "visualizador-QA2-bicep" },
     "staticwebAppQAsku":                    { "value": "Free" },
     "staticwebAppQArepo":                   { "value": "https://github.com/LisitSPA/Visualizador.Front" },
     "staticwebAppQAbranch":                 { "value": "QA" },
