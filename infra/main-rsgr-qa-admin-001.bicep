@@ -53,7 +53,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     virtualNetworkSubnetId: ''
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-    linuxFxVersion: 'DOTNET|8.0' //.NET 8.0
+    linuxFxVersion: 'DOTNETCORE|8.0' //DOTNET|8.0 //.NET 8.0
     kind: appServicePortalProductoreskind
     reserved: true
   }
