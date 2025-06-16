@@ -3,11 +3,11 @@
     "value": [
       {
         "resourceGroupName": "RSGR-QA-CREDENCIALES-001",
-        "location": "eastus"
+        "location": "centralus"
       },
       {
         "resourceGroupName": "RSGR-PR-CREDENCIALES-001",
-        "location": "eastus"
+        "location": "centralus"
       }
     ]
   }
