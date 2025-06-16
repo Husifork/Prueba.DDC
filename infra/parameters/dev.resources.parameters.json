@@ -5,13 +5,6 @@
     "location":                             { "value": "centralus" },
     "tagproyecto":                          { "value": "Credenciales QA" },
     "tagambiente":                          { "value": "QA" },
-    "appServicePlanNameCredenciales":       { "value": "ASPL-QA-CREDENCIALES-001" },
-    "appServiceCredenciales":               { "value": "APSV-QA-CREDENCIALES-001" },
-    "appServiceCredencialeskind":           { "value": "app" },
-    "staticwebAppQAName":                   { "value": "credenciales-qa-bicep" },
-    "staticwebAppQAsku":                    { "value": "Free" },
-    "staticwebAppQArepo":                   { "value": "https://github.com/LisitSPA/credenciales/tree/QA" },
-    "staticwebAppQAbranch":                 { "value": "QA" },
-    "staticwebAppQAprovider":               { "value": "GitHub" }
+    "appServicePlanNameCredenciales":       { "value": "ASPL-QA-CREDENCIALES-001" }
   }
 }
