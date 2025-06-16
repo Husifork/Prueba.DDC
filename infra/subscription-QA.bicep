@@ -13,7 +13,7 @@ param staticwebAppQAbranch string
 param staticwebAppQAprovider string
 
 
-// Para el despliegue de los recursos en el grupo de recursos RSGR-QA-ADMIN-001.
+// Para el despliegue de los recursos en el grupo de recursos RSGR-QA-ADMIN-001
 module qa 'main-rsgr-qa-credenciales-001.bicep' = {
   name: 'deployToRSGR-QA-PTLPRODUCTORES-001'
   scope: resourceGroup('RSGR-QA-PTLPRODUCTORES-001')
