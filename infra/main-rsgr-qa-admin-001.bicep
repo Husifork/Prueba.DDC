@@ -32,8 +32,10 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     location: location
     appServiceName: appServicePortalProductoresApi
     appServicePlanName: appServicePlanNamePortalProductores
+    virtualNetworkSubnetId: ''
     tagproyecto: tagproyecto
     tagambiente: tagambiente
+    runtime: 'DOTNET|8.0' //.NET 8.0
     kind: appServicePortalProductoreskind
     reserved: true
   }
@@ -48,8 +50,10 @@ module appServicePlan 'modules/appServicePlan/appServicePlanAdministrador.bicep'
     location: location
     appServiceName: appServicePortalProductores
     appServicePlanName: appServicePlanNamePortalProductores
+    virtualNetworkSubnetId: ''
     tagproyecto: tagproyecto
     tagambiente: tagambiente
+    runtime: 'DOTNET|8.0' //.NET 8.0
     kind: appServicePortalProductoreskind
     reserved: true
   }

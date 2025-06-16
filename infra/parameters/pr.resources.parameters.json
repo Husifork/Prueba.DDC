@@ -6,7 +6,7 @@
     "tagproyecto":                          { "value": "Portal Productores PR" },
     "tagambiente":                          { "value": "PR" },
     "vnetName":                             { "value": "VNET-PR-DDC-001" },
-    "addresPrefix":                         { "value": "10.5.0.0/16" },
+    "addressPrefix":                        { "value": "10.5.0.0/16" },
     "gatewaySubnetName":                    { "value": "GatewaySubnet" },
     "gatewaySubnetPrefix":                  { "value": "10.5.1.0/24" },
     "appSubnetName":                        { "value": "subred-net" },

@@ -54,7 +54,7 @@ module appService1 'modules/appService/appService.bicep' = {
     location: location
     appServiceName: appServicePortalProductoresApi
     appServicePlanName: appServicePlanNamePortalProductores
-    virtualNetworkSubnetId: vnet.outputs.appSubnetId
+    virtualNetworkSubnetId: '' //vnet.outputs.appSubnetId
     tagproyecto: tagproyecto
     tagambiente: tagambiente
     runtime: 'v8.0' //.NET 8.0
