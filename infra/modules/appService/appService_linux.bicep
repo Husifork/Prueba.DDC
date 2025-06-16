@@ -46,6 +46,7 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
       acrUseManagedIdentityCreds: false
       alwaysOn: false
       http20Enabled: true
+      scmType: 'GitHubAction'
       functionAppScaleLimit: 0
       minimumElasticInstanceCount: 0
     }

@@ -2,16 +2,15 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-    "location":                             { "value": "eastus2" },
-    "tagproyecto":                          { "value": "Portal Productores QA" },
+    "location":                             { "value": "eastus" },
+    "tagproyecto":                          { "value": "Credenciales QA" },
     "tagambiente":                          { "value": "QA" },
-    "appServicePlanNamePortalProductores":  { "value": "ASPL-QA-PTLPRODUCTORES-001" },
-    "appServicePortalProductoresApi":       { "value": "APSV-QA-PTLPRODUCTORES-001" },
-    "appServicePortalProductores":          { "value": "APSV-QA-PTLPRODUCTORES-002" },
-    "appServicePortalProductoreskind":      { "value": "app,linux" },
-    "staticwebAppQAName":                   { "value": "portal-productores-qa-bicep" },
+    "appServicePlanNameCredenciales":       { "value": "ASPL-QA-CREDENCIALES-001" },
+    "appServiceCredenciales":               { "value": "APSV-QA-CREDENCIALES-001" },
+    "appServiceCredencialeskind":           { "value": "app" },
+    "staticwebAppQAName":                   { "value": "credenciales-qa-bicep" },
     "staticwebAppQAsku":                    { "value": "Free" },
-    "staticwebAppQArepo":                   { "value": "https://github.com/LisitSPA/PortalProductores.Front" },
+    "staticwebAppQArepo":                   { "value": "https://github.com/LisitSPA/credenciales/tree/QA" },
     "staticwebAppQAbranch":                 { "value": "QA" },
     "staticwebAppQAprovider":               { "value": "GitHub" }
   }
