@@ -60,6 +60,7 @@ module appService1 'modules/appService/appService_windows.bicep' = {
     netFrameworkVersion: 'v8.0' //.NET 8.0
     kind: appServicePortalProductoreskind
     reserved: false 
+    CURRENT_STACK: 'dotnet'
    }
      dependsOn: [
     appServicePlan1

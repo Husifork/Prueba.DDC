@@ -7,6 +7,7 @@ param kind string
 param reserved bool
 param virtualNetworkSubnetId string
 param netFrameworkVersion string
+param CURRENT_STACK string
 
 resource appService 'Microsoft.Web/sites@2024-04-01' = {
   name: appServiceName
@@ -41,10 +42,12 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
     virtualNetworkSubnetId: empty(virtualNetworkSubnetId) ? null : virtualNetworkSubnetId
     siteConfig: {
 //      numberOfWorkers: 1
+      minTlsCipherSuite: 'TLSCipherSuiteOrder2022'
       netFrameworkVersion: netFrameworkVersion
 //      acrUseManagedIdentityCreds: false
       alwaysOn: false
       http20Enabled: true
+      scmType: 'GitHubAction'
  //     functionAppScaleLimit: 0
  //     minimumElasticInstanceCount: 0
  /*     virtualApplications: [
@@ -71,6 +74,14 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
     publicNetworkAccess: 'Enabled'
     storageAccountRequired: false
     keyVaultReferenceIdentity: 'SystemAssigned'
+  }
+}
+
+resource appServiceMetadata 'Microsoft.Web/sites/config@2022-09-01' = {
+  parent: appService
+  name: 'metadata'
+  properties: {
+    CURRENT_STACK: CURRENT_STACK
   }
 }
 
