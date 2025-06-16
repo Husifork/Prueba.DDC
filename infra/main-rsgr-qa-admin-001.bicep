@@ -53,7 +53,7 @@ module appServicePlan 'modules/appServicePlan/appServicePlan.bicep' = {
     virtualNetworkSubnetId: ''
     tagproyecto: tagproyecto
     tagambiente: tagambiente
-    runtime: 'DOTNETCORE|8.0' //DOTNET|8.0 //.NET 8.0
+    runtime: 'NODE|18-lts' 
     kind: appServicePortalProductoreskind
     reserved: true
   }
