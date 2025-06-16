@@ -3,12 +3,12 @@ targetScope = 'resourceGroup'
 param location string = resourceGroup().location
 param tagproyecto string
 param tagambiente string
-param vnetName string //*
-param addressPrefix string //'10.5.0.0/16'
-param gatewaySubnetName string //GatewaySubnet
-param gatewaySubnetPrefix string // '10.5.1.0/24'
-param appSubnetName string // 'subred-net'
-param appSubnetPrefix string // '10.5.0.0/24'
+param vnetName string
+param addressPrefix string 
+param gatewaySubnetName string 
+param gatewaySubnetPrefix string 
+param appSubnetName string 
+param appSubnetPrefix string 
 param appServicePlanNamePortalProductores string
 param appServicePortalProductoresApi string
 param appServicePortalProductoreskind string
