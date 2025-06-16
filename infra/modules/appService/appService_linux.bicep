@@ -45,12 +45,12 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
       linuxFxVersion: linuxFxVersion
       acrUseManagedIdentityCreds: false
       alwaysOn: false
-      http20Enabled: false
+      http20Enabled: true
       functionAppScaleLimit: 0
       minimumElasticInstanceCount: 0
     }
     scmSiteAlsoStopped: false
-    clientAffinityEnabled: true
+    clientAffinityEnabled: false
     clientCertEnabled: false
     clientCertMode: 'Required'
     hostNamesDisabled: false

@@ -40,20 +40,20 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
     vnetContentShareEnabled: false
     virtualNetworkSubnetId: empty(virtualNetworkSubnetId) ? null : virtualNetworkSubnetId
     siteConfig: {
-      numberOfWorkers: 1
+//      numberOfWorkers: 1
       netFrameworkVersion: netFrameworkVersion
-      acrUseManagedIdentityCreds: false
+//      acrUseManagedIdentityCreds: false
       alwaysOn: false
       http20Enabled: true
-      functionAppScaleLimit: 0
-      minimumElasticInstanceCount: 0
-      virtualApplications: [
+ //     functionAppScaleLimit: 0
+ //     minimumElasticInstanceCount: 0
+ /*     virtualApplications: [
           {
             virtualPath: '/'
             physicalPath: 'site\\wwwroot'
             preloadEnabled: true
           }
-    ]
+    ]*/
     }
     scmSiteAlsoStopped: false
     clientAffinityEnabled: true
