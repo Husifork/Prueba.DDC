@@ -7,6 +7,7 @@ param kind string
 param reserved bool
 param virtualNetworkSubnetId string
 param netFrameworkVersion string
+param minTlsCipherSuite string
 param CURRENT_STACK string
 
 resource appService 'Microsoft.Web/sites@2024-04-01' = {
@@ -42,7 +43,7 @@ resource appService 'Microsoft.Web/sites@2024-04-01' = {
     virtualNetworkSubnetId: empty(virtualNetworkSubnetId) ? null : virtualNetworkSubnetId
     siteConfig: {
 //      numberOfWorkers: 1
-      minTlsCipherSuite: 'TLSCipherSuiteOrder2022'
+      minTlsCipherSuite:minTlsCipherSuite
       netFrameworkVersion: netFrameworkVersion
 //      acrUseManagedIdentityCreds: false
       alwaysOn: false
