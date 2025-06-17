@@ -6,7 +6,7 @@
     "tagproyecto":                          { "value": "Visualizador PR" },
     "tagambiente":                          { "value": "PR" },
     "appServicePlanNameVisualizador":       { "value": "ASPL-PR-VISUALIZADOR-001" },
-    "appServiceVisualizador":               { "value": "APSV-PR-VISUALIZADOR-001" },
+    "appServiceVisualizador":               { "value": "APSV-PR-VISUALIZADOR-002" },
     "appServiceVisualizadorkind":           { "value": "app"},
     "staticwebAppPRName":                   { "value": "visualizador-bicep" },
     "staticwebAppPRsku":                    { "value": "Free" },

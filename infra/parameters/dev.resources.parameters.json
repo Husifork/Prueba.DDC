@@ -6,7 +6,7 @@
     "tagproyecto":                          { "value": "Visualizador QA" },
     "tagambiente":                          { "value": "QA" },
     "appServicePlanNameVisualizador":       { "value": "ASPL-QA-VISUALIZADOR-001" },
-    "appServiceVisualizador":               { "value": "APSV-QA-VISUALIZADOR-001" },
+    "appServiceVisualizador":               { "value": "APSV-QA-VISUALIZADOR-002" },
     "appServiceVisualizadorkind":           { "value": "app"},
     "staticwebAppQAName":                   { "value": "visualizador-QA-bicep" },
     "staticwebAppQAsku":                    { "value": "Free" },
