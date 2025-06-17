@@ -48,6 +48,7 @@ jobs:
       with:
         inlineScript: |
           az deployment sub create \
+            --name SUBSCRIPTION-QA-$(date +%Y%m%d%H%M%S) \
             --location centralus \
             --template-file infra/subscription-QA.bicep \
             --parameters infra/parameters/dev.resources.parameters.json
