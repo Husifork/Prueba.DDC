@@ -19,6 +19,10 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         enable-AzPSSession: false
     
+    - name: Prueba de despliegue simple
+      run: |
+        az group show --name RSGR-QA-GESTORCARGA-001   
+
     - name: Crear Resource Groups
       uses: azure/cli@v1
       with:
