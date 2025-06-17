@@ -38,6 +38,7 @@ jobs:
       with:
         inlineScript: |
           az deployment sub create \
+            --name RG-$(date +%s) \
             --location centralus \
             --template-file infra/rg.bicep \
             --parameters infra/parameters/dev.rg.parameters.json
