@@ -8,12 +8,24 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/azure-cli:2.59.0
     environment: qa
     steps:
     - name: Checkout código
       uses: actions/checkout@v3
+
+    - name: Azure Logout previo (opcional)
+      run: az logout || true  
+
+    - name: Instala versión específica de Azure CLI
+      run: |
+        sudo apt-get update
+        sudo apt-get remove -y azure-cli || true
+        sudo apt-get install -y ca-certificates curl apt-transport-https lsb-release gnupg
+        curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+        echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+        sudo apt-get update
+        sudo apt-get install -y azure-cli=2.59.0-1~$(lsb_release -cs)
+        az --version
 
     - name: Iniciar sesión en Azure
       uses: azure/login@v2
@@ -21,10 +33,6 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
         enable-AzPSSession: false
     
-    - name: Prueba de despliegue simple
-      run: |
-        az group show --name RSGR-QA-GESTORCARGA-001   
-
     - name: Crear Resource Groups
       uses: azure/cli@v1
       with:
