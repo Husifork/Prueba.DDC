@@ -24,6 +24,7 @@ jobs:
       with:
         inlineScript: |
           az deployment sub create \
+            --name RG-$(date +%s) \
             --location centralus \
             --template-file infra/rg.bicep \
             --parameters infra/parameters/dev.rg.parameters.json
@@ -33,6 +34,7 @@ jobs:
       with:
         inlineScript: |
           az deployment sub create \
+            --name SUBSCRIPTION-PR-$(date +%Y%m%d%H%M%S) \
             --location centralus \
             --template-file infra/subscription-PR.bicep \
             --parameters infra/parameters/pr.resources.parameters.json
