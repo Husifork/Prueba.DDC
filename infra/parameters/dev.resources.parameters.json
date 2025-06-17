@@ -8,7 +8,7 @@
     "appServicePlanNameVisualizador":       { "value": "ASPL-QA-VISUALIZADOR-001" },
     "appServiceVisualizador":               { "value": "APSV-QA-VISUALIZADOR-001" },
     "appServiceVisualizadorkind":           { "value": "app"},
-    "staticwebAppQAName":                   { "value": "visualizador-QA2-bicep" },
+    "staticwebAppQAName":                   { "value": "visualizador-QA-bicep" },
     "staticwebAppQAsku":                    { "value": "Free" },
     "staticwebAppQArepo":                   { "value": "https://github.com/LisitSPA/Visualizador.Front" },
     "staticwebAppQAbranch":                 { "value": "QA" },
