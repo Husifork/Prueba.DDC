@@ -17,7 +17,7 @@ jobs:
       uses: azure/login@v2
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        enable-AzPSSession: true
+        enable-AzPSSession: false
     
     - name: Crear Resource Groups
       uses: azure/cli@v1
@@ -36,3 +36,6 @@ jobs:
             --location centralus \
             --template-file infra/subscription-QA.bicep \
             --parameters infra/parameters/dev.resources.parameters.json
+
+    - name: Azure Logout
+      run: az logout
