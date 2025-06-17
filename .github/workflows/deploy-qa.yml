@@ -8,6 +8,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/azure-cli:2.59.0
     environment: qa
     steps:
     - name: Checkout código
